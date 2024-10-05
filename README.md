@@ -1,51 +1,171 @@
 # Natural ou Fake Natty? Como Vencer na Era das IAs Generativas
 
-## 🚀 Introdução
 
-> Woooow! Look at this 👀
+DESCRIÇÃO DO PROJETO 🚀
 
-Olá pessoal, Venilton da DIO aqui! Inspirado na hype _"Natty or Not"_ do fisiculturismo, este Lab da DIO te convida a conhecer o mundo das IAs Generativas, explorando o potencial dessas tendências tecnológicas incríveis!
+Este projeto é incrível! 😄
 
-## 🎯 Bora Pro Desafio!? Você Já Venceu 💪🤓
+______________________________________________________________________________________________________________________________________________________________________________________________
 
-### Objetivos
+- O projeto irá demonstrar como uma tecnologia generativa específica pode facilitar a vida dos seres humanos em diversas questões
+_____________________________________________________________________________________________________________________________________________________________________________________________
+TECNOLOGIAS UTILIZADAS
+_____________________________________________________________________________________________________________________________________________________________________________________________
+- A tecnologia utilizada para esse projeto será o ChatGpt, onde solicitarei a ele respostas especifícas a cerca da própria tecnologia e um breve resumo sobre a técnica Machine Learning
 
-1. **Explorar IAs Generativas**: Utilize essas tecnologias para criar conteúdos que sejam o mais realista possível. Seja criativo! Você pode produzir imagens, textos, áudios, vídeos ou combinações de tudo isso!
-1. **Potfólio de Projetos**:
-    1. Faça o "fork" deste repositório, criando uma cópia em seu GitHub pessoal;
-    2. Edite seu README com os detalhes do seu projeto, siga nosso [Template](#template) (é só copiar, colar e preencher);
-    3. Submeta o link do seu repositório na plataforma da DIO. Pronto, você acabou de fortalecer seu portfólio de projetos nos perfis do GitHub e DIO 🚀
-1. **Efeito de Rede**: Compartilhe seus resultados nas redes sociais com a hashtag **#LabDIONattyOrNot**. Não esqueça de nos marcar: [DIO](https://www.linkedin.com/school/dio-makethechange) e [falvojr](https://www.linkedin.com/in/falvojr).
+  PROCESSO DE CRIAÇÃO 🖨️
+_____________________________________________________________________________________________________________________________________________________________________________________________
 
-### Template
+- Solicitei ao ChatGPT que me informasse quais são os principais códigos utilizador na liguaguem de programação Kotlin .
+- Pedi ao ChatGPT que fizesse para mim um resumo sobre o conceito e a utilização da técnica Machine Learning .
 
-```markdown
-# Título do Projeto Extremamente Aesthetic ;)
+___________________________________________________________________________________________________________________________________________________________________________________________
 
-## 📒 Descrição
-Breve descrição do seu projeto
+RESULTADOS 
 
-## 🤖 Tecnologias Utilizadas
-Liste as IAs Generativas e outras ferramentas usadas
+1- Claro! Aqui estão alguns dos principais conceitos e códigos usados na linguagem de programação Kotlin:
 
-## 🧐 Processo de Criação
-Descreva como você criou o conteúdo
+### 1. **Declaração de Variáveis**
 
-## 🚀 Resultados
-Apresente os resultados do seu projeto
+Kotlin possui dois tipos de declaração de variáveis:
 
-## 💭 Reflexão (Opcional)
-Comente sobre o desafio de criar algo 'natty' com IA.
+- **Mutable (variável que pode ser alterada)**:
+  ```kotlin
+  var nome: String = "João"
+  nome = "Maria"
+  ```
+
+- **Immutable (variável que não pode ser alterada)**:
+  ```kotlin
+  val idade: Int = 25
+  ```
+
+### 2. **Funções**
+
+Declaração de funções:
+```kotlin
+fun somar(a: Int, b: Int): Int {
+    return a + b
+}
+
+// Chamada da função
+val resultado = somar(5, 10)
 ```
 
-### Exemplos e Insigths
+### 3. **Classes e Objetos**
 
-- [E-BOOK](/exemplos/E-BOOK.md)
-- [Podcast](/exemplos/PODCAST.md)
-- [Vídeo (Avatar Virtual)](/exemplos/VIDEO.md)
+Definindo uma classe:
+```kotlin
+class Pessoa(val nome: String, var idade: Int) {
+    fun apresentar() {
+        println("Olá, meu nome é $nome e eu tenho $idade anos.")
+    }
+}
 
-## Links Interessantes
+// Criando um objeto
+val pessoa = Pessoa("João", 30)
+pessoa.apresentar()
+```
 
-[Base10: If You’re Not First, You’re Last: How AI Becomes Mission Critical](https://base10.vc/post/generative-ai-mission-critical/)
+### 4. **Controle de Fluxo**
 
-![Base10's Trend Map Generative AI](https://github.com/digitalinnovationone/lab-natty-or-not/assets/730492/f4df26e8-f8f7-4419-8252-c69d73ea930c)
+- **If-Else**:
+  ```kotlin
+  val numero = 10
+  if (numero > 0) {
+      println("Número positivo")
+  } else {
+      println("Número negativo ou zero")
+  }
+  ```
+
+- **When** (similar ao switch):
+  ```kotlin
+  when (numero) {
+      1 -> println("Um")
+      2 -> println("Dois")
+      else -> println("Outro número")
+  }
+  ```
+
+### 5. **Listas e Coleções**
+
+- **Listas**:
+  ```kotlin
+  val lista = listOf("Maçã", "Banana", "Laranja")
+  for (fruta in lista) {
+      println(fruta)
+  }
+  ```
+
+- **Mutable List**:
+  ```kotlin
+  val listaMutavel = mutableListOf("Maçã", "Banana")
+  listaMutavel.add("Laranja")
+  ```
+
+### 6. **Null Safety**
+
+Kotlin tem um sistema de segurança de nulidade que ajuda a evitar NullPointerExceptions:
+
+- **Variáveis não nulas**:
+  ```kotlin
+  var nome: String = "João" // Não pode ser nulo
+  ```
+
+- **Variáveis que podem ser nulas**:
+  ```kotlin
+  var nomeNullable: String? = null // Pode ser nulo
+  ```
+
+- **Operador Elvis**:
+  ```kotlin
+  val comprimento = nomeNullable?.length ?: 0
+  ```
+
+### 7. **Lambda e Funções de Ordem Superior**
+
+- **Funções Lambda**:
+  ```kotlin
+  val soma = { a: Int, b: Int -> a + b }
+  println(soma(5, 10))
+  ```
+
+- **Funções de Ordem Superior**:
+  ```kotlin
+  fun executarOperacao(a: Int, b: Int, operacao: (Int, Int) -> Int): Int {
+      return operacao(a, b)
+  }
+  
+  val resultado = executarOperacao(5, 10, soma)
+  ```
+
+### 8. **Tratamento de Exceções**
+
+Kotlin também permite o tratamento de exceções com `try-catch`:
+```kotlin
+try {
+    val resultado = 10 / 0
+} catch (e: ArithmeticException) {
+    println("Erro: ${e.message}")
+}
+```
+
+2 - Claro! Machine Learning, ou aprendizado de máquina, é uma subárea da inteligência artificial que permite que sistemas aprendam e melhorem a partir de dados, sem serem explicitamente programados para cada tarefa.
+
+**Funcionalidade:**
+
+1. **Aprendizado a partir de dados:** O sistema analisa grandes volumes de dados e identifica padrões ou características relevantes.
+   
+2. **Modelagem:** Cria modelos matemáticos que podem prever resultados ou tomar decisões com base em novos dados.
+
+3. **Aprimoramento contínuo:** À medida que mais dados são disponibilizados, o modelo pode ser ajustado para melhorar sua precisão.
+
+4. **Aplicações diversas:** É usado em várias áreas, como reconhecimento de voz, recomendação de produtos, diagnósticos médicos, entre outros.
+
+Em resumo, o Machine Learning permite que as máquinas aprendam com experiências passadas e tomem decisões de forma autônoma.
+__________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
